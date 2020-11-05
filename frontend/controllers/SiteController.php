@@ -17,6 +17,7 @@ use common\models\Portfolio;
 use common\models\AboutUs;
 use common\models\Team;
 use common\models\Clients;
+use common\models\Contact;
 
 /**
  * Site controller
@@ -35,6 +36,7 @@ class SiteController extends Controller
         $data['ModelAboutUs']   = AboutUs::find()->all();
         $data['ModelTeam']      = Team::find()->all();
         $data['ModelClients']   = Clients::find()->all();
+        $data['ModelContact']     = Contact::find()->where(['Status' => 1])->all();
 
         $dataPortfolio = $data['ModelPortfolio'];
 

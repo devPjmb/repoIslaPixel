@@ -6,9 +6,20 @@
 ?>
 
 <!-- Header -->
-  <style type="text/css">
+  <style>
     header.masthead{
       background-image:url(img/start/<?= $ModelStart[0]->ImgBackground ?>);
+      background-repeat:no-repeat;
+      background-position:center;
+      background-attachment:fixed;
+      background-size: cover;
+    }
+    section#contact{
+      background-image:url(img/contact/<?= $ModelContact[0]->imgBackground ?>);
+      background-repeat:no-repeat;
+      background-position:center;
+      background-attachment:fixed;
+      background-size: cover;
     }
   </style>
   <header class="masthead">
