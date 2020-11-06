@@ -75,7 +75,7 @@
     <div class="container">
       <div class="flipInY row footer-center">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Pablo Marcano <a href="mailto:pablo.marcano.16@gmail.com?subject=Cotizacion%20de%20un%20sitio%20o%20sistema%20web"><i class="far fa-paper-plane fa-lg"></i></a></span>
+          <span class="copyright">Copyright &copy; <?= date('Y') ?> <a href="mailto:pablo.marcano.16@gmail.com?subject=Cotizacion%20de%20un%20sitio%20o%20sistema%20web"><strong>Nxt Lvl Dev<sup><i class="far fa-paper-plane fa-lg"></i></sup></strong></a></span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
@@ -90,7 +90,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://instagra.com/islapixel" target="_blank">
+              <a href="https://instagram.com/islapixel" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
