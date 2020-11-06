@@ -45,7 +45,7 @@
       <div class="row text-center">
         <?php foreach($ModelServices as $auxServices): ?>
           <div class="slideInLeft col-md-4">
-            <img class="img-fluid imgServices" src="img/services/<?= $auxServices->ServiceImg?>">
+            <img alt="<?= $auxServices->ServiceImg?>" class="img-fluid imgServices" src="img/services/<?= $auxServices->ServiceImg?>">
             <h4 class="service-heading"><?= $auxServices->ServiceName?></h4>
             <p class="text-muted"><?= $auxServices->ServiceDescription?></p>
           </div>
@@ -64,17 +64,17 @@
           <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="portfolio-carousel">
         <?php foreach($ModelPortfolio as $auxPortfolio): ?>
           <?php $dataModal = str_replace(' ', '_', $auxPortfolio->ProjectName) ?>
           <div class="rotateInDownLeft col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#<?= $dataModal?>">
+            <a class="portfolio-link" data-toggle="modal" href="#<?= $dataModal.$auxPortfolio->PortfolioID?>">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid img-thumbnail" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="">
+              <img class="img-fluid img-thumbnail" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectImg?>">
             </a>
             <div class="portfolio-caption">
               <h4><?= $auxPortfolio->ProjectName?></h4>
@@ -104,7 +104,7 @@
             <li class="fadeInLeftBig <?= ($change)?'1':'timeline-inverted'; ?>">
               <?php $change = ($change)?false:true; ?>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/<?= $auxAboutUs->Image ?>" alt="">
+                <img class="rounded-circle img-fluid" src="img/about/<?= $auxAboutUs->Image ?>" alt="<?= $auxAboutUs->Image ?>">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -140,11 +140,11 @@
           <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="team-carousel">
         <?php foreach($ModelTeam as $auxTeam): ?>
         <div class="zoomInLeft col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/<?= $auxTeam->Photo ?>" alt="">
+            <img class="mx-auto rounded-circle" src="img/team/<?= $auxTeam->Photo ?>" alt="<?= $auxTeam->Photo ?>">
             <h4><?= $auxTeam->Name ?></h4>
             <p class="text-muted"><?= $auxTeam->Job ?></p>
             <ul class="list-inline social-buttons">
@@ -189,7 +189,7 @@
         <?php foreach($ModelClients as $auxClients): ?>
         <div class="col-md-3 col-sm-6">
           <a href="javascript:void(0)">
-            <img class="img-fluid d-block mx-auto" src="img/clients/<?= $auxClients->ClientImg ?>" alt="">
+            <img class="img-fluid d-block mx-auto" src="img/clients/<?= $auxClients->ClientImg ?>" alt="<?= $auxClients->ClientImg ?>">
           </a>
         </div>
         <?php endforeach ?>

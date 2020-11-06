@@ -100,30 +100,47 @@ use backend\assets\AppAssetLayoutAll;
             'template' => '<div class="btn-group" > {enable} {delete} </div>',
             'buttons' => [
                 'delete' => function($url, $model){
-                    return Html::a('<span class="fa fa-trash"></span>', ['delete', 'id' => $model->StartID], [
-                        'class' => 'btn btn-danger click-confirm',
-                        'tittle-alert' => '¿Borrar Imagen?',
-                        'text-alert'  => '¿Esta seguro de querer borrar esta imagen?. Esta accion no se puede revertir.',
-                    ]);
+                    switch ($model->Status) {
+                        case '1':
+                            $icon = Html::button('<i class="fa fa-trash-alt"></i>', [
+                                'class'=>'btn btn-danger click-confirm',
+                                'tittle-alert' => 'ERROR',
+                                'text-alert' => 'No puede eliminar esta imagen ya que esta activad. Tiene que habilitar otra imagen para que esta se puede eliminar.'
+                            ]);
+                            break;
+                        case '0':
+                            $icon = Html::a('<span class="fa fa-trash"></span>', ['delete', 'id' => $model->StartID], [
+                                'class' => 'btn btn-danger click-confirm',
+                                'tittle-alert' => '¿Borrar Imagen?',
+                                'text-alert'  => '¿Esta seguro de querer borrar esta imagen?. Esta accion no se puede revertir.',
+                            ]);
+                            break;
+                    }
+                    return $icon;
                 },
                 'enable' => function($url, $model){
                     switch ($model->Status) {
                         case '1':
-                            $icon = "<span class=\"fa fa-eye-slash\"></span>";
+                            $icon = Html::button('<i class="fa fa-eye-slash"></i>', [
+                                'class'=>'btn btn-warning click-confirm',
+                                'tittle-alert' => 'ERROR',
+                                'text-alert' => 'No puede deshabilitar esta imagen. Tiene que habilitar otra imagen para que esta se puede ocultar.'
+                            ]);
                             break;
                         case '0':
-                            $icon = "<span class=\"fa fa-eye\"></span>";
-                            break;
-                        default:
-                            $icon = "<span class=\"fa fa-circle\"></span>";
+                            $icon = Html::a("<span class='fa fa-eye'></span>", [
+                                'enable',
+                                'id' => $model->StartID
+                                ],
+                                [
+                                    'class' => 'btn btn-warning click-confirm',
+                                    'tittle-alert' => '¿Habilitar Imagen?',
+                                    'text-alert' => 'Esta apunto de habilitar esta imagen. Esta accion desabilitara la imagen que se este mostrando en la pagina. ¿Desea continuar?'
+                                ]
+                            );
                             break;
                     }
-                    return Html::a($icon, [
-                        'enable', 'id' => $model->StartID,], [
-                            'class' => 'btn btn-warning click-confirm',
-                            'tittle-alert' => '¿Habilitar Imagen?',
-                            'text-alert' => 'Esta apunto de habilitar esta imagen. Esta accion desabilitara la imagen que se este mostrando en la pagina. ¿Desea continuar?'
-                    ]);
+                    return $icon;
                 }
                
             ],
@@ -165,7 +182,7 @@ use backend\assets\AppAssetLayoutAll;
                 <?= $form->field($ModelStart, 'TempImg')->fileInput(['class'=>'imgpostchang'])->label(false); ?>
             </div>
             <div class="col-md-4">
-                <img id="blah" src="#" alt="your image" class="img-responsive" />
+                <img id="blah" src="<?= Yii::getAlias("@proyect")."/img/start/default.png" ?>" alt="your image" class="img-responsive" />
             </div>
           </div>
 

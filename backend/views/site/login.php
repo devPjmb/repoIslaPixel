@@ -51,31 +51,31 @@ use yii\bootstrap\ActiveForm;
             <!-- BEGIN LOGIN FORM -->
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
-                <h3 class="form-title font-green">Sign In</h3>
+                <h3 class="form-title font-green">Incio de Sesión</h3>
                 <div class="alert alert-danger <?= $model->getErrors()? 'display-block' :'display-hide' ; ?> ">
                     <button class="close" data-close="alert"></button>
                     <span><?= $model->getErrors()? $model->getErrors('error')[0] :'' ; ?> </span>
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">Username</label>
+                    <label class="control-label visible-ie8 visible-ie9">Usuario</label>
                    <!--  <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" /> -->
-                    <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>'form-control form-control-solid placeholder-no-fix', 'placeholder'=>'Username'])->label(false); ?>
+                    <?= $form->field($model, 'username')->textInput(['autofocus' => true,'class'=>'form-control form-control-solid placeholder-no-fix', 'placeholder'=>'Usuario'])->label(false); ?>
                      </div>
                 <div class="form-group">
-                    <label class="control-label visible-ie8 visible-ie9">Password</label>
+                    <label class="control-label visible-ie8 visible-ie9">Contraseña</label>
                     <!-- <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /> -->
-                    <?= $form->field($model, 'password')->passwordInput(['class'=>'form-control form-control-solid placeholder-no-fix','placeholder'=>'Password'])->label(false); ?>
+                    <?= $form->field($model, 'password')->passwordInput(['class'=>'form-control form-control-solid placeholder-no-fix','placeholder'=>'Contraseña'])->label(false); ?>
                      </div>
                 <div class="form-actions">
                     <!-- <button type="submit" class="btn green uppercase">Login</button> -->
                      <?= Html::submitButton('Enviar', ['class' => 'btn green uppercase', 'name' => 'login-button']); ?>
                     <label class="rememberme check mt-checkbox mt-checkbox-outline">
                         <!-- <input type="checkbox" name="rememberMe" value="1" />Remember -->
-                         <?= $form->field($model, 'rememberMe')->checkbox()->label(false); ?>Remember
+                         <?= $form->field($model, 'rememberMe')->checkbox()->label(false); ?>Recuerdame
                         <!-- <span></span> -->
                     </label>
-                    <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                    <!-- <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a> -->
                 </div>
                 <div class="login-options">
                     <!-- <h4>Or login with</h4> -->
@@ -97,7 +97,7 @@ use yii\bootstrap\ActiveForm;
 
                 <?php ActiveForm::end(); ?>
         </div>
-        <div class="copyright"> 2017 © Copyright. </div>
+        <div class="copyright"> <?php echo date('Y') ?> © Copyright. <strong>Nxt Lvl Dev</strong> </div>
         <!-- BEGIN CORE PLUGINS -->
         <script src="<?= Yii::getAlias('@web')?>/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="<?= Yii::getAlias('@web')?>/js/js.cookie.min.js" type="text/javascript"></script>

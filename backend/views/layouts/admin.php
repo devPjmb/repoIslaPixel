@@ -145,7 +145,7 @@
                 </a>
             </div>
             <div class="page-footer">
-                <div class="page-footer-inner"> 2017 &copy; <a target="_blank" href="http://mydesk.digital/">Mydesk.Digital</a>
+                <div class="page-footer-inner"> <?php echo date('Y') ?> © Copyright. <strong>Nxt Lvl Dev</strong>
                 </div>
                 <div class="scroll-to-top">
                     <i class="icon-arrow-up"></i>

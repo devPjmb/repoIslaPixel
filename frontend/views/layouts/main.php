@@ -39,9 +39,9 @@
   <div class="se-pre-con"></div>
 
   <!-- Navigation -->
-  <nav class="wow fadeInDownBig navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="fadeInDownBig navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" class="img-fluid" width="250"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" class="img-fluid" width="250" alt="logoWhite"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -73,24 +73,24 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="wow flipInY row footer-center">
+      <div class="flipInY row footer-center">
         <div class="col-md-4">
           <span class="copyright">Copyright &copy; Pablo Marcano <a href="mailto:pablo.marcano.16@gmail.com?subject=Cotizacion%20de%20un%20sitio%20o%20sistema%20web"><i class="far fa-paper-plane fa-lg"></i></a></span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://facebook.com/islapixel/" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://api.whatsapp.com/send?phone=584268882241&text=Contacto%20desde%20https%3A%2F%2Fislapixel.com%2F" target="_blank">
                 <i class="fab fa-whatsapp"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="https://instagra.com/islapixel" target="_blank">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
@@ -120,7 +120,7 @@
   </footer>
   <?php foreach($GLOBALS['dataPortfolio'] as $auxPortfolio): ?>
   <?php $dataModal = str_replace(' ', '_', $auxPortfolio['ProjectName']) ?>
-  <div class="portfolio-modal modal fade" id="<?= $dataModal?>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="portfolio-modal modal fade" id="<?= $dataModal.$auxPortfolio['PortfolioID']?>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -135,7 +135,7 @@
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase"><?= $auxPortfolio->ProjectName?></h2>
                 <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="">
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $dataModal?>">
                 <p><?= $auxPortfolio->ProjectDescription?></p>
                 <!-- <ul class="list-inline">
                   <li>Date: January 2017</li>

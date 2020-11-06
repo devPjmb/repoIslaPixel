@@ -28,7 +28,6 @@ class AppAsset extends AssetBundle
 		'js/jqBootstrapValidation.js',
 		'js/jquery.easing.min.js',
 		'js/modernizer.min.js',
-		'js/wow.min.js',
 		'js/slick.min.js',
 		'js/main.js',
 	];
