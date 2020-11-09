@@ -3,29 +3,94 @@ $(window).on('load', function() {
 	$(".se-pre-con").fadeOut("slow");});
 $( document ).ready(function() {
     $("#clients-carousel").slick({
-         centerMode: true,
-         centerPadding: '10px',
-         slidesToShow: 4,
-         arrows: false,
-         slidesToScroll: 1,
-         autoplay: true,
-         autoplaySpeed: 2000,
-    })
+      speed: 300,
+      slidesToShow: 4,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
     $("#team-carousel").slick({
-         centerMode: true,
-         centerPadding: '10px',
-         slidesToShow: 3,
-         arrows: false,
-         slidesToScroll: 1,
-         autoplay: true,
-         autoplaySpeed: 2000,
-    })
+      speed: 300,
+      slidesToShow: 4,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
     $("#portfolio-carousel").slick({
-         slidesPerRow: 3,
-         rows: 2,
-         arrows: false,
-         slidesToShow: 1,
-         autoplay: true,
-         autoplaySpeed: 5000,
+      speed: 300,
+      slidesToScroll: 3,
+      slidesToShow: 4,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     })
 })

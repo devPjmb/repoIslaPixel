@@ -21,14 +21,14 @@ class Start extends ActiveRecord
         return [
             [['Status'], 'boolean'],
             [['ImgBackground'], 'string'],
-            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
+            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, svg'],
 
         ];
     }
      public function upload()
     {
         if ($this->validate()) {
-            $this->ImgBackground = $this->TempImg->baseName . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
+            $this->ImgBackground = str_replace(' ', '_', $this->TempImg->baseName) . "-" . substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
             $this->TempImg->saveAs(Yii::$app->basePath.'/../img/start/' .$this->ImgBackground );
             $this->TempImg = null;
 

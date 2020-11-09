@@ -10,7 +10,7 @@
 
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
     
@@ -23,7 +23,7 @@
 
     gtag('config', 'UA-145009983-1');
   </script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+  <meta http-equiv="Content-Type" content="charset=utf8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Isla Pixel Publicidad!">
   <meta name="author" content="Desarrollo Marcano F.P.">
@@ -31,7 +31,22 @@
   <?= Html::csrfMetaTags() ?>
   <title><?= Html::encode($this->title) ?></title>
   <?php $this->head() ?>
-
+  <style>
+    header.masthead{
+      background-image:url(img/start/<?= $GLOBALS['dataStart'][0]['ImgBackground'] ?>);
+      background-repeat:no-repeat;
+      background-position:center;
+      background-attachment:fixed;
+      background-size: cover;
+    }
+    section#contact{
+      background-image:url(img/contact/<?= $GLOBALS['dataContact'][0]['imgBackground'] ?>);
+      background-repeat:no-repeat;
+      background-position:center;
+      background-attachment:fixed;
+      background-size: cover;
+    }
+  </style>
 </head>
 
 <body id="page-top">

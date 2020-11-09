@@ -26,7 +26,7 @@ class SiteController extends Controller
 {
     public function actionIndex()
     {
-        global $dataPortfolio;
+        global $dataPortfolio, $dataStart, $dataContact;
 
         $data = array();
 
@@ -36,9 +36,11 @@ class SiteController extends Controller
         $data['ModelAboutUs']   = AboutUs::find()->all();
         $data['ModelTeam']      = Team::find()->all();
         $data['ModelClients']   = Clients::find()->all();
-        $data['ModelContact']     = Contact::find()->where(['Status' => 1])->all();
+        $data['ModelContact']   = Contact::find()->where(['Status' => 1])->all();
 
-        $dataPortfolio = $data['ModelPortfolio'];
+        $dataPortfolio   = $data['ModelPortfolio'];
+        $dataStart       = $data['ModelStart'];
+        $dataContact     = $data['ModelContact'];
 
         return $this->render('index',$data);
     }

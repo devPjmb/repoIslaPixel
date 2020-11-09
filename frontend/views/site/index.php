@@ -6,22 +6,6 @@
 ?>
 
 <!-- Header -->
-  <style>
-    header.masthead{
-      background-image:url(img/start/<?= $ModelStart[0]->ImgBackground ?>);
-      background-repeat:no-repeat;
-      background-position:center;
-      background-attachment:fixed;
-      background-size: cover;
-    }
-    section#contact{
-      background-image:url(img/contact/<?= $ModelContact[0]->imgBackground ?>);
-      background-repeat:no-repeat;
-      background-position:center;
-      background-attachment:fixed;
-      background-size: cover;
-    }
-  </style>
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
@@ -187,7 +171,7 @@
     <div class="container">
       <div class="lightSpeedIn row" id="clients-carousel">
         <?php foreach($ModelClients as $auxClients): ?>
-        <div class="col-md-3 col-sm-6">
+        <div class="col">
           <a href="javascript:void(0)">
             <img class="img-fluid d-block mx-auto" src="img/clients/<?= $auxClients->ClientImg ?>" alt="<?= $auxClients->ClientImg ?>">
           </a>
