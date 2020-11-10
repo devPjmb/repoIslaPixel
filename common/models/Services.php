@@ -27,7 +27,7 @@ class Services extends ActiveRecord
      public function upload()
     {
         if ($this->validate()) {
-            $this->ServiceImg = $this->TempImg->baseName . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
+            $this->ServiceImg = str_replace(' ', '_', $this->TempImg->baseName) . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
             $this->TempImg->saveAs(Yii::$app->basePath.'/../img/services/' .$this->ServiceImg );
             $this->TempImg = null;
 

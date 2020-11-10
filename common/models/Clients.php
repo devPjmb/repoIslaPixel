@@ -37,7 +37,7 @@ class Clients extends ActiveRecord
     {
         if ($this->validate()){
 
-            $this->ClientImg = $this->TempImg->baseName . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
+            $this->ClientImg = str_replace(' ', '_', $this->TempImg->baseName) . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
 
             $this->TempImg->saveAs(Yii::$app->basePath.'/../img/clients/'.$this->ClientImg);
 

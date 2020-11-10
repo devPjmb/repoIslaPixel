@@ -30,7 +30,7 @@ class UserAccount extends ActiveRecord implements IdentityInterface
      public function upload()
     {
         if ($this->validate()) {
-            $this->PhotoUrl = $this->PhotoProfile->baseName . "_". substr(md5(uniqid(rand())),0,6) . '.' . $this->PhotoProfile->extension;
+            $this->PhotoUrl = str_replace(' ', '_', $this->PhotoProfile->baseName) . "_". substr(md5(uniqid(rand())),0,6) . '.' . $this->PhotoProfile->extension;
             $this->PhotoProfile->saveAs(Yii::$app->basePath.'/../img/profile/' .$this->PhotoUrl );
             $this->PhotoProfile = null;
 

@@ -37,9 +37,9 @@ class Portfolio extends ActiveRecord
     {
         if ($this->validate()){
 
-            $this->ProjectImg = $this->TempImg->baseName . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
+            $this->ProjectImg = str_replace(' ', '_', $this->TempImg->baseName) . "-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
 
-            $this->ProjectImgThumbnail = $this->TempImg->baseName . "-thumbnail-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
+            $this->ProjectImgThumbnail = str_replace(' ', '_', $this->TempImg->baseName) . "-thumbnail-". substr(md5(uniqid(rand())),0,6) . '.' . $this->TempImg->extension;
 
             $this->TempImg->saveAs(Yii::$app->basePath.'/../img/portfolio/'.$this->ProjectImg);
 
