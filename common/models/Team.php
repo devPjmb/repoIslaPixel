@@ -27,7 +27,7 @@ class Team extends ActiveRecord
                 ['TempImg'], 
                 'file', 
                 'skipOnEmpty' => true, 
-                'extensions' => 'png, jpg, jpeg, gif, svg',
+                'extensions' => 'png, jpg, jpeg, gif, svg, webp',
             ],
 
         ];
