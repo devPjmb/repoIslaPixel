@@ -21,7 +21,7 @@ class Start extends ActiveRecord
         return [
             [['Status'], 'boolean'],
             [['ImgBackground'], 'string'],
-            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, svg'],
+            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg, svg, webp'],
 
         ];
     }

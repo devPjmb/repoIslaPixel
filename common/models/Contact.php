@@ -21,7 +21,7 @@ class Contact extends ActiveRecord
         return [
             [['Status'], 'boolean'],
             [['imgBackground'], 'string'],
-            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, gif, jpeg, svg'],
+            [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, gif, jpeg, svg, webp'],
 
         ];
     }

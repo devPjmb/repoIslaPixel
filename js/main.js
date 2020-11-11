@@ -1,11 +1,15 @@
 $(window).on('load', function() {
 	// Animate loader off screen
-	$(".se-pre-con").fadeOut("slow");});
+	$(".se-pre-con").fadeOut(2000, function(){
+    $(".se-pre-con img").fadeOut(2100)
+  });
+});
 $( document ).ready(function() {
     $("#clients-carousel").slick({
       speed: 300,
       slidesToShow: 4,
       autoplay: true,
+      infinity: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -36,6 +40,7 @@ $( document ).ready(function() {
       speed: 300,
       slidesToShow: 4,
       autoplay: true,
+      infinity: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -67,6 +72,7 @@ $( document ).ready(function() {
       slidesToScroll: 3,
       slidesToShow: 4,
       autoplay: true,
+      infinity: true,
       responsive: [
         {
           breakpoint: 1024,

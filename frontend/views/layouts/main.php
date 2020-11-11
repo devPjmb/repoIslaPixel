@@ -23,9 +23,9 @@
 
     gtag('config', 'UA-145009983-1');
   </script>
-  <meta http-equiv="Content-Type" content="charset=utf8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Isla Pixel Publicidad!">
+  <meta name="description" content="Empresa dedica al diseño grafico, fotocopias, pendones, vallas, calcomanias, rotulaciones y mucho mas.">
   <meta name="author" content="Desarrollo Marcano F.P.">
 
   <?= Html::csrfMetaTags() ?>
@@ -51,12 +51,14 @@
 
 <body id="page-top">
   <?php $this->beginBody() ?>
-  <div class="se-pre-con"></div>
+  <div class="se-pre-con">
+    <img src="img/page-loading.png" class="img-fluid" alt="page-loading">
+  </div>
 
   <!-- Navigation -->
   <nav class="fadeInDownBig navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" class="img-fluid" width="250" alt="logoWhite"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" class="img-fluid" width="250" alt="Logo IslaPixel Blanco"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -147,11 +149,9 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
-                <!-- Project Details Go Here -->
                 <h2 class="text-uppercase"><?= $auxPortfolio->ProjectName?></h2>
-                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
-                <img class="img-fluid d-block mx-auto" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $dataModal?>">
-                <p><?= $auxPortfolio->ProjectDescription?></p>
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectName?>">
+                <div><?= $auxPortfolio->ProjectDescription?></div>
                 <!-- <ul class="list-inline">
                   <li>Date: January 2017</li>
                   <li>Client: Window</li>

@@ -9,8 +9,6 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-       <!-- <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div> -->
         <a class="fadeInUpBig btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Conoce Mas</a>
       </div>
     </div>
@@ -23,15 +21,14 @@
         <div class="zoomIn col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Servicios</h2>
           <hr>
-          <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
         </div>
       </div>
       <div class="row text-center">
         <?php foreach($ModelServices as $auxServices): ?>
           <div class="slideInLeft col-md-4">
-            <img alt="<?= $auxServices->ServiceImg?>" class="img-fluid imgServices" src="img/services/<?= $auxServices->ServiceImg?>">
+            <img alt="<?= $auxServices->ServiceName?>" class="img-fluid imgServices" src="img/services/<?= $auxServices->ServiceImg?>">
             <h4 class="service-heading"><?= $auxServices->ServiceName?></h4>
-            <p class="text-muted"><?= $auxServices->ServiceDescription?></p>
+            <div class="text-muted"><?= $auxServices->ServiceDescription?></div>
           </div>
         <?php endforeach ?>
       </div>
@@ -45,7 +42,6 @@
         <div class="fadeInUpBig col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Portafolio</h2>
           <hr>
-          <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
         </div>
       </div>
       <div class="row" id="portfolio-carousel">
@@ -58,11 +54,10 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid img-thumbnail" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectImg?>">
+              <img class="img-fluid img-thumbnail" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectName?>">
             </a>
             <div class="portfolio-caption">
               <h4><?= $auxPortfolio->ProjectName?></h4>
-              <!-- <p class="text-muted">Illustration</p> -->
             </div>
           </div>
         <?php endforeach ?>
@@ -76,7 +71,6 @@
       <div class="row">
         <div class="fadeInUpBig col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Acerca de Nosotros</h2>
-          <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
           <hr>
         </div>
       </div>
@@ -88,7 +82,7 @@
             <li class="fadeInLeftBig <?= ($change)?'1':'timeline-inverted'; ?>">
               <?php $change = ($change)?false:true; ?>
               <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/<?= $auxAboutUs->Image ?>" alt="<?= $auxAboutUs->Image ?>">
+                <img class="rounded-circle img-fluid" src="img/about/<?= $auxAboutUs->Image ?>" alt="<?= $auxAboutUs->Title ?>">
               </div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
@@ -96,7 +90,7 @@
                   <h4 class="subheading"><?= $auxAboutUs->Title ?></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted"><?= $auxAboutUs->Description ?></p>
+                  <div class="text-muted"><?= $auxAboutUs->Description ?></div>
                 </div>
               </div>
             </li>
@@ -121,14 +115,13 @@
         <div class="fadeInUpBig col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Nuestro Increible Equipo</h2>
           <hr>
-          <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
         </div>
       </div>
       <div class="row" id="team-carousel">
         <?php foreach($ModelTeam as $auxTeam): ?>
         <div class="zoomInLeft col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/<?= $auxTeam->Photo ?>" alt="<?= $auxTeam->Photo ?>">
+            <img class="mx-auto rounded-circle" src="img/team/<?= $auxTeam->Photo ?>" alt="<?= $auxTeam->Name ?>">
             <h4><?= $auxTeam->Name ?></h4>
             <p class="text-muted"><?= $auxTeam->Job ?></p>
             <ul class="list-inline social-buttons">
@@ -158,22 +151,24 @@
         </div>
         <?php endforeach ?>
       </div>
-      <!-- <div class="row">
-        <div class="zoomIn col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-      </div>
-    </div> -->
+    </div>
   </section>
 
   <!-- Clients -->
   <section class="py-5">
     <div class="container">
+      <div class="row">
+        <h2 class="col-12 text-center section-heading text-uppercase">Nuestros Clientes</h2>
+        <hr>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
       <div class="lightSpeedIn row" id="clients-carousel">
         <?php foreach($ModelClients as $auxClients): ?>
         <div class="col">
           <a href="javascript:void(0)">
-            <img class="img-fluid d-block mx-auto" src="img/clients/<?= $auxClients->ClientImg ?>" alt="<?= $auxClients->ClientImg ?>">
+            <img class="img-fluid d-block mx-auto" src="img/clients/<?= $auxClients->ClientImg ?>" alt="<?= $auxClients->ClientName ?>">
           </a>
         </div>
         <?php endforeach ?>
@@ -187,7 +182,6 @@
       <div class="row">
         <div class="fadeInUpBig col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Contactanos</h2>
-          <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
           <hr>
         </div>
       </div>
