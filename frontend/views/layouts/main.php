@@ -25,7 +25,7 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Empresa dedica al diseño grafico, fotocopias, pendones, vallas, calcomanias, rotulaciones y mucho mas.">
+  <meta name="description" content="Empresa dedica al diseño grafico 🖌️, fotocopias, pendones, vallas, calcomanias, rotulaciones y mucho mas.">
   <meta name="author" content="Desarrollo Marcano F.P.">
 
   <?= Html::csrfMetaTags() ?>
@@ -52,13 +52,13 @@
 <body id="page-top">
   <?php $this->beginBody() ?>
   <div class="se-pre-con">
-    <img src="img/page-loading.png" class="img-fluid" alt="page-loading">
+    <img src="img/page-loading.webp" class="img-fluid" alt="page-loading">
   </div>
 
   <!-- Navigation -->
   <nav class="fadeInDownBig navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.png" class="img-fluid" width="250" alt="Logo IslaPixel Blanco"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/logo.webp" class="img-fluid" width="250" alt="Logo IslaPixel Blanco"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
