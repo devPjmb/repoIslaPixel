@@ -89,3 +89,9 @@ img.imgServices{
     transform: scale(0.95);
   }
 }
+
+.slick-track{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
