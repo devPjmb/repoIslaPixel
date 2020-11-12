@@ -99,4 +99,5 @@ $( document ).ready(function() {
         }
       ]
     })
+    $("#clients-carousel").children().children().addClass("slickFlex")
 })
