@@ -7,8 +7,8 @@ RewriteRule . index.php
 
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresDefault "access plus 1 week"
-    ExpiresByType text/css "access plus 1 week"
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
     ExpiresByType image/gif "access plus 1 month"
     ExpiresByType image/png "access plus 1 month"
     ExpiresByType image/jpeg "access plus 1 month"
