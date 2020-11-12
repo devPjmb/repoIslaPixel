@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
 	];
 	public $js = [
 		'js/jquery.min.js',
-		'js/agency.min.js',
+		'js/popper.min.js',
 		'js/bootstrap.bundle.min.js',
 		'js/contact_me.js',
 		'js/jqBootstrapValidation.js',
@@ -30,6 +30,7 @@ class AppAsset extends AssetBundle
 		'js/modernizer.min.js',
 		'js/slick.min.js',
 		'js/main.js',
+		'js/agency.min.js',
 	];
 	public $depends = [];
 	}
