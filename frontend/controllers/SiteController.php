@@ -18,6 +18,7 @@ use common\models\AboutUs;
 use common\models\Team;
 use common\models\Clients;
 use common\models\Contact;
+use common\models\Seo;
 
 /**
  * Site controller
@@ -26,7 +27,7 @@ class SiteController extends Controller
 {
     public function actionIndex()
     {
-        global $dataPortfolio, $dataStart, $dataContact;
+        global $dataPortfolio, $dataStart, $dataContact, $dataSeo;
 
         $data = array();
 
@@ -37,10 +38,12 @@ class SiteController extends Controller
         $data['ModelTeam']      = Team::find()->all();
         $data['ModelClients']   = Clients::find()->all();
         $data['ModelContact']   = Contact::find()->where(['Status' => 1])->all();
+        $data['ModelSEO']       = Seo::find()->all();
 
         $dataPortfolio   = $data['ModelPortfolio'];
         $dataStart       = $data['ModelStart'];
         $dataContact     = $data['ModelContact'];
+        $dataSeo         = $data['ModelSEO'];
 
         return $this->render('index',$data);
     }

@@ -25,7 +25,7 @@
                 <div class="page-header-inner ">
                     <div class="page-logo">
                         <a href="<?= Yii::$app->urlManager->createUrl('/home'); ?>">
-                            <img src="<?= Yii::getAlias('@proyect').'/img/logo.png'?>" alt="logo" class="img-responsive" style="height: 50px;" />
+                            <img src="<?= Yii::getAlias('@proyect').'/img/logo.webp'?>" alt="logo" class="img-responsive" style="height: 50px;" />
                         </a>
                         <div class="menu-toggler sidebar-toggler" style="margin-right: -45px;">
                             <!--<span></span>-->

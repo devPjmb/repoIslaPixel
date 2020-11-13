@@ -24,12 +24,24 @@
     gtag('config', 'UA-145009983-1');
   </script>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Empresa dedica al diseño grafico 🖌️, fotocopias, pendones, vallas, calcomanias, rotulaciones y mucho mas.">
+  <meta name="googlebot" content="noodp"/>
+  <title><?= Html::encode($this->title) ?></title>
+  <meta name="description" content="<?= $GLOBALS['dataSeo'][0]['metaDescription'] ?>">
+  <meta name="keywords" content="<?= $GLOBALS['dataSeo'][0]['metaKeywords'] ?>">
+  <link rel="canonical" href="https://www.islapixel.com"/>
+  <meta name="Robots" content="index, follow">
+  <meta name="revisit-after" content="1 day">
+  <meta name="Distribution" content="Global">
+  <meta name="geography" content="Venezuela">
+  <meta name="language" content="spanish">
+  <meta name="city" content="Nueva Esparta, Venezuela">
+  <meta name="country" content="Venezuela">
+  <link rel="shortcut icon" href="favicon.png">
   <meta name="author" content="Desarrollo Marcano F.P.">
 
   <?= Html::csrfMetaTags() ?>
-  <title><?= Html::encode($this->title) ?></title>
   <?php $this->head() ?>
   <style>
     header.masthead{
