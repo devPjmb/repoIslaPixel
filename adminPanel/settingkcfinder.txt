@@ -1,0 +1,1 @@
+{"uploadURL":"http:\/\/localhost\/proyectos\/repoIslaPixel\/adminPanel\/..\/img\/blog\/","uploadDir":"\/opt\/lampp\/htdocs\/proyectos\/repoIslaPixel\/adminPanel\/..\/img\/blog\/"}

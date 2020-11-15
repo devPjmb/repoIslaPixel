@@ -92,6 +92,9 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog">Blog</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -104,7 +107,7 @@
     <div class="container">
       <div class="flipInY row footer-center">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; <?= date('Y') ?> <a href="mailto:pablo.marcano.16@gmail.com?subject=Cotizacion%20de%20un%20sitio%20o%20sistema%20web"><strong>Nxt Lvl Dev<sup><i class="far fa-paper-plane fa-lg"></i></sup></strong></a></span>
+          <span class="copyright">Copyright &copy; <?= date('Y') ?> <a href="mailto:nxtlvl.oficial@gmail.com?subject=Cotizacion%20de%20un%20sitio%20o%20sistema%20web"><strong>Nxt Lvl Dev<sup><i class="far fa-paper-plane fa-lg"></i></sup></strong></a></span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
