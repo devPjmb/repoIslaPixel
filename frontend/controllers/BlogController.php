@@ -20,8 +20,11 @@ use common\models\Blog;
  */
 class BlogController extends Controller
 {
-    public function actionIndex()
+    public function actionIndex($idTitle)
     {
+        if(isset($idTitle) && !empty($idTitle)){
+            return $this->render('post');
+        }
     	$this->layout = 'mainBlog';
 
     	global $dataSeo;
