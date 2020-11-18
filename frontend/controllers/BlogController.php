@@ -20,7 +20,7 @@ use common\models\Blog;
  */
 class BlogController extends Controller
 {
-    public function actionIndex($idTitle)
+    public function actionIndex($idTitle="")
     {
         if(isset($idTitle) && !empty($idTitle)){
             return $this->render('post');
