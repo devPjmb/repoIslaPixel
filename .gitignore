@@ -29,7 +29,3 @@ robots.txt
 /common/config/main-local.php
 
 /img/*
-
-.htaccess
-
-adminPanel/.htaccess
