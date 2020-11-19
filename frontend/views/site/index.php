@@ -2,7 +2,7 @@
     use yii\helpers\Html;
     use yii\helpers\Url;
     use yii\bootstrap\ActiveForm;
-    $this->title = 'Isla Pixel Publicidad C.A. Empresa dedica al diseño grafico.';
+    $this->title = 'Isla Pixel Publicidad C.A. Empresa dedicada al diseño grafico.';
 ?>
 
 <!-- Header -->

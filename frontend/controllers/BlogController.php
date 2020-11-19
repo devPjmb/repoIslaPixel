@@ -14,21 +14,17 @@ use yii\db\Expression;
 use common\components\ValidUsers;
 use common\models\Seo;
 use common\models\Blog;
+use common\models\SeoUrl;
 
 /**
  * Blog controller
  */
+global $dataSeo;
 class BlogController extends Controller
 {
     public function actionIndex($idTitle="")
     {
-        if(isset($idTitle) && !empty($idTitle)){
-            return $this->render('post');
-        }
-    	$this->layout = 'mainBlog';
-
-    	global $dataSeo;
-
+        $this->layout = 'mainBlog';
         $data = array();
 
         $data['ModelSEO'] = $dataSeo = Seo::find()->all();
@@ -43,5 +39,17 @@ class BlogController extends Controller
 		]);
 
         return $this->render('index',$data);
+    }
+
+    public function actionPost($id){
+        $this->layout = 'mainBlog';
+        
+        $data = array();
+
+        $data['ModelSEO'] = $dataSeo = Seo::find()->all();
+
+        $data['ModelBlog'] = Blog::findOne($id);
+
+        return $this->render('post', $data);
     }
 }

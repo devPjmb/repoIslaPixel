@@ -8,6 +8,8 @@ use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use yii\web\UploadedFile;
 
+use common\models\SeoUrl;
+
 class Blog extends ActiveRecord 
 {
     public $TempImg;
@@ -19,7 +21,7 @@ class Blog extends ActiveRecord
     public function rules()
     {
         return [
-            [['Title','Content', 'PubDate', 'ImageUrl'], 'string'],
+            [['Title','Content', 'PubDate', 'ImageUrl', 'SeoUrl'], 'string'],
             [['TempImg'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, svg, jpeg, webp'],
 
         ];
@@ -36,10 +38,6 @@ class Blog extends ActiveRecord
             return false;
         }
     }
-    
-        /**
-     * @inheritdoc
-     */
     public function getId()
     {
         return $this->getPrimaryKey();

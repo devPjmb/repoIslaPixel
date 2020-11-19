@@ -17,14 +17,13 @@
         <h1 class="my-4">IslaPixel Blog</h1>
 
       	<?php foreach ($ModelBlog as $auxBlog):?>
-          <?php $titleSeo = str_replace(' ', '_', $auxBlog['Title']) ?>
         	<!-- Blog Post -->
 	        <div class="card mb-4">
 	          <img class="card-img-top" src="<?= Yii::getAlias('@web').'/img/blog/'.$auxBlog['ImageUrl']?>" alt="Card image cap">
 	          <div class="card-body">
 	            <h2 class="card-title"><?= $auxBlog['Title'] ?></h2>
-	            <div class="card-text"><?= $auxBlog['Content'] ?></div>
-	            <a href="<?= strtolower($titleSeo) ?>" class="btn btn-primary">Leer Más &rarr;</a>
+	            <div class="card-text"><?= strlen(strip_tags($auxBlog['Content']))>50 ? substr(strip_tags($auxBlog['Content']), 0, 100)."..." : strip_tags($auxBlog['Content']) ; ?></div>
+	            <a href="post/<?= $auxBlog['PostID'] ?>" class="btn btn-primary">Leer Más &rarr;</a>
 	          </div>
 	          <div class="card-footer text-muted">
 	            <?= $auxBlog['PubDate'] ?>

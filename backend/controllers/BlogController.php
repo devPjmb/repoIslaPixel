@@ -64,6 +64,7 @@
 			$ModelBlog = ($id !== null) ? Blog::findOne($id) :  new Blog;
 
 			if($ModelBlog->load($post)){
+				$ModelBlog->SeoUrl = str_replace(' ', '_', strtolower($post['Blog']['Title']));
 				$upload = true;
 				$ModelBlog->TempImg = UploadedFile::getInstance($ModelBlog, 'TempImg');
 				if($ModelBlog->TempImg)
