@@ -23,7 +23,7 @@
 	          <div class="card-body">
 	            <h2 class="card-title"><?= $auxBlog['Title'] ?></h2>
 	            <div class="card-text"><?= strlen(strip_tags($auxBlog['Content']))>50 ? substr(strip_tags($auxBlog['Content']), 0, 100)."..." : strip_tags($auxBlog['Content']) ; ?></div>
-	            <a href="post/<?= $auxBlog['PostID'] ?>" class="btn btn-primary">Leer Más &rarr;</a>
+	            <a href="<?= Yii::getAlias('@web').'/blog/post/'.$auxBlog['PostID'] ?>" class="btn btn-primary">Leer Más &rarr;</a>
 	          </div>
 	          <div class="card-footer text-muted">
 	            <?= $auxBlog['PubDate'] ?>
@@ -40,7 +40,6 @@
             <a class="page-link" href="#">Newer &rarr;</a>
           </li>
         </ul>
-        <?= LinkPager::widget(['pagination'=>$dataProvider->pagination]); ?>
 
       </div>
 

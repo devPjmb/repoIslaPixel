@@ -22,7 +22,7 @@ use common\models\SeoUrl;
 global $dataSeo;
 class BlogController extends Controller
 {
-    public function actionIndex($idTitle="")
+    public function actionIndex()
     {
         $this->layout = 'mainBlog';
         $data = array();
