@@ -31,12 +31,15 @@ class SiteController extends Controller
 
         $data = array();
 
+        $_temp = Clients::find()->all();
+        shuffle($_temp);
+
         $data['ModelStart']     = Start::find()->where(['Status' => 1])->all();
         $data['ModelServices']  = Services::find()->all();
         $data['ModelPortfolio'] = Portfolio::find()->all();
         $data['ModelAboutUs']   = AboutUs::find()->all();
         $data['ModelTeam']      = Team::find()->all();
-        $data['ModelClients']   = Clients::find()->all();
+        $data['ModelClients']   = $_temp;
         $data['ModelContact']   = Contact::find()->where(['Status' => 1])->all();
         $data['ModelSEO']       = Seo::find()->all();
 
