@@ -91,8 +91,8 @@
 			$ModelPortfolio = Portfolio::findOne($id);
 			$transaction = \Yii::$app->db->beginTransaction();
 			try {
-				$deleteFile = unlink(Yii::$app->basePath.'/../img/portfolio/'.$ModelPortfolio->ProyectImg);
-				$deleteThumb = unlink(Yii::$app->basePath.'/../img/portfolio/'.$ModelPortfolio->ProyectImgThumbnail);
+				$deleteFile = unlink(Yii::$app->basePath.'/../img/portfolio/'.$ModelPortfolio->ProjectImg);
+				$deleteThumb = unlink(Yii::$app->basePath.'/../img/portfolio/'.$ModelPortfolio->ProjectImgThumbnail);
 				if($deleteFile && $deleteThumb){
 					if($ModelPortfolio->delete()){
 					$transaction->commit();

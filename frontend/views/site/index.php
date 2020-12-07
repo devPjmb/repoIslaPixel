@@ -47,7 +47,7 @@
       <div class="row" id="portfolio-carousel">
         <?php foreach($ModelPortfolio as $auxPortfolio): ?>
           <?php $dataModal = str_replace(' ', '_', $auxPortfolio->ProjectName) ?>
-          <div class="rotateInDownLeft col-md-4 col-sm-6 portfolio-item">
+          <div class="rotateInDownLeft col-md-6 portfolio-item">
             <a class="portfolio-link" data-toggle="modal" href="#<?= $dataModal.$auxPortfolio->PortfolioID?>">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
