@@ -113,7 +113,7 @@
     <div class="container">
       <div class="row">
         <div class="fadeInUpBig col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Nuestro Equipo</h2>
+          <h2 class="section-heading text-uppercase">Nuestro Equipo Creativo</h2>
           <hr>
         </div>
       </div>
