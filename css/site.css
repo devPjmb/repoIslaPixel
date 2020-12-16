@@ -95,3 +95,7 @@ img.imgServices{
   justify-content: center;
   align-items: center;
 }
+
+.text-muted > p {
+  text-align: justify;
+}
