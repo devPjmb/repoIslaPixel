@@ -212,7 +212,17 @@
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <button id="sendMessageButton" class="jackInTheBox btn btn-primary btn-xl text-uppercase" type="submit">Enviar Mensaje</button>
+                <div
+                  class="g-recaptcha" 
+                  data-sitekey="6Lf3TQoaAAAAAAA_PlR6tlvjS8bJXGs2mAeaF2sw"
+                  data-theme="dark"
+                  data-callback="capcha_filled"
+                  data-expired-callback="capcha_expired">
+                </div>
+                <button class="g-recaptcha jackInTheBox btn btn-primary btn-xl text-uppercase"
+                        id="sendMessageButton"
+                        type="submit">Enviar Mensaje
+                </button>
               </div>
             </div>
           </form>
