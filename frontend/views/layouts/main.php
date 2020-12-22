@@ -13,7 +13,7 @@
 <html lang="es">
 
 <head>
-    
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145009983-1"></script>
   <script>
