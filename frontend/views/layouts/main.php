@@ -150,7 +150,7 @@
     </div>
   </footer>
   <?php foreach($GLOBALS['dataPortfolio'] as $auxPortfolio): ?>
-  <?php $dataModal = str_replace(' ', '_', $auxPortfolio['ProjectName']) ?>
+  <?php $dataModal = str_replace('([^A-Za-z0-9])', '_', $auxPortfolio['ProjectName']) ?>
   <div class="portfolio-modal modal fade" id="<?= $dataModal.$auxPortfolio['PortfolioID']?>" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
