@@ -185,6 +185,7 @@
     </div>
   </div>
   <?php endforeach ?>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8bd68639fd114c1a87fd03669ce66784"}'></script><!-- End Cloudflare Web Analytics -->
   <?php $this->endBody() ?>
   <!--Start of Tawk.to Script-->
   <!-- <script type="text/javascript">
