@@ -99,3 +99,7 @@ img.imgServices{
 .text-muted > p {
   text-align: justify;
 }
+
+.img-portfolio {
+  width: 255px !important
+}

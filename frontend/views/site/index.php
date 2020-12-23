@@ -54,7 +54,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid img-thumbnail" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectName?>">
+              <img class="img-fluid img-thumbnail img-portfolio" src="img/portfolio/<?= $auxPortfolio->ProjectImg?>" alt="<?= $auxPortfolio->ProjectName?>">
             </a>
             <div class="portfolio-caption">
               <h4><?= $auxPortfolio->ProjectName?></h4>
@@ -212,15 +212,11 @@
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <!-- <div
-                  class="g-recaptcha" 
-                  data-sitekey="6Lf3TQoaAAAAAAA_PlR6tlvjS8bJXGs2mAeaF2sw"
-                  data-theme="dark"
-                  data-callback="capcha_filled"
-                  data-expired-callback="capcha_expired">
-                </div> -->
                 <button class="g-recaptcha jackInTheBox btn btn-primary btn-xl text-uppercase"
                         id="sendMessageButton"
+                        data-sitekey="6LehDhIaAAAAAMzMEjGEA4lL95KAyTrNxxh98U-j" 
+                        data-callback='onSubmit' 
+                        data-action='submit'
                         type="submit">Enviar Mensaje
                 </button>
               </div>

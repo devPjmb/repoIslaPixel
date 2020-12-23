@@ -22,6 +22,9 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-145009983-1');
+    function onSubmit(token) {
+      document.getElementById("contactForm").submit();
+    }
   </script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
