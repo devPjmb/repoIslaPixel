@@ -41,7 +41,7 @@
   <meta name="language" content="spanish">
   <meta name="city" content="Nueva Esparta, Venezuela">
   <meta name="country" content="Venezuela">
-  <meta name="author" content="Desarrollo Marcano F.P.">
+  <meta name="author" content="NXT LVL DEV">
   <link rel="shortcut icon" href="img/favicon.ico">
   <?= Html::csrfMetaTags() ?>
   <?php $this->head() ?>
@@ -185,7 +185,6 @@
     </div>
   </div>
   <?php endforeach ?>
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8bd68639fd114c1a87fd03669ce66784"}'></script><!-- End Cloudflare Web Analytics -->
   <?php $this->endBody() ?>
   <!--Start of Tawk.to Script-->
   <!-- <script type="text/javascript">
