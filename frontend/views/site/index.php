@@ -187,7 +187,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+          <form id="contactForm" name="sendMessage">
             <div class="row">
               <div class="col-md-6">
                 <div class="slideInLeft form-group">
@@ -209,14 +209,13 @@
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
+              <div style="display: none !important;" hidden class="d-none">
+                <input type="text" id="controlspam" name="nospam" />
+              </div>
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
-                <button class="g-recaptcha jackInTheBox btn btn-primary btn-xl text-uppercase"
-                        id="sendMessageButton"
-                        data-sitekey="6LehDhIaAAAAAMzMEjGEA4lL95KAyTrNxxh98U-j" 
-                        data-callback='onSubmit' 
-                        data-action='submit'
+                <button class="btn btn-primary btn-xl text-uppercase"
                         type="submit">Enviar Mensaje
                 </button>
               </div>
