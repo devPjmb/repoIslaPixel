@@ -13,10 +13,20 @@
 <html lang="es">
 
 <head>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Ld3DGIaAAAAAOBqXniz4hFjFF7lU8XZtMQvjlbj"></script> 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145009983-1"></script>
   <script>
+    function enviarFormulario() {
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Ld3DGIaAAAAAOBqXniz4hFjFF7lU8XZtMQvjlbj', {
+          action: 'procesar'
+        }).then(function(token) {
+          document.getElementById('token').value = token;
+          document.getElementById("formulario").submit();
+        });
+      });
+    } 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

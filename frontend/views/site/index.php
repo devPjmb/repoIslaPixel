@@ -187,7 +187,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sendMessage">
+          <form id="contactForm" name="sendMessage" onsubmit="enviarFormulario();">
             <div class="row">
               <div class="col-md-6">
                 <div class="slideInLeft form-group">
@@ -211,6 +211,8 @@
               </div>
               <div style="display: none !important;" hidden class="d-none">
                 <input type="text" id="controlspam" name="nospam" />
+                <input type="hidden" id="token" name="token">
+                <input type="hidden" id="action" name="action" value="procesar">
               </div>
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
